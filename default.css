@@ -1,17 +1,80 @@
+    /* font-family: 'Architects Daughter', cursive;font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Yomogi', cursive; */
+
 :root {
-    --mainText: rgb(194, 27, 27);
+    --navColor: rgb(59, 5, 5);
+    --mainColor: rgb(250, 239, 239);
+    --secondaryColor: white;
+    --navText: rgb(245, 186, 186);
+    --mainText: rgb(87, 19, 19);
+    --secondaryText: black;
+    --mainFont: 'Satisfy', cursive;
+    --secondaryFont: 'Indie Flower', cursive;
 }
 
 
 html, body {
+    background-color: var(--mainColor);
     padding: 0;
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+.page {
+    display: block;
+}
+
+ h2, h3, h4, h5, h6, strong {
     color: var(--mainText);
+    font-family: var(--mainFont);
 }
 
 p, li, span, label, input, textarea {
-    color: black;
+    color: var(--secondaryText);
+    font-family: var(--secondaryFont);
+}
+
+.nav {
+    overflow: auto;
+}
+
+.navbar {
+    background-color: var(--navColor);
+    color: var(--navText);
+    font-family: var(--mainFont);
+    padding: 5px;
+    margin: 50px;
+    position: sticky;
+    top: 0;
+}
+
+
+.s1 {
+    background-color: var(--mainColor);
+    overflow: auto;
+}
+
+.s2 {
+    background-color: var(--secondaryColor);
+    overflow: auto;
+    border-radius: 50px;
+}
+
+.welcome {
+    margin: auto;
+}
+
+.main-container {
+    width: 1200px;
+    margin: auto;
+    height: 500px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
+    }
 }
