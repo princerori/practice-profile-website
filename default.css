@@ -46,7 +46,7 @@ p, li, span, label, input, textarea {
     color: var(--navText);
     font-family: var(--mainFont);
     padding: 5px;
-    margin: 50px;
+    margin: 0;
     position: sticky;
     top: 0;
 }
@@ -70,7 +70,6 @@ p, li, span, label, input, textarea {
 .main-container {
     width: 1200px;
     margin: auto;
-    height: 500px;
 }
 
 @media screen and (max-width: 1200px) {
