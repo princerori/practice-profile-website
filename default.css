@@ -10,6 +10,7 @@
     --mainColor: rgb(250, 239, 239);
     --secondaryColor: white;
     --navText: rgb(245, 186, 186);
+    --linkText: white;
     --mainText: rgb(87, 19, 19);
     --secondaryText: black;
     --mainFont: 'Satisfy', cursive;
@@ -27,6 +28,22 @@ html, body {
     display: block;
 }
 
+h1 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    font-size: 20px;
+}
+
  h2, h3, h4, h5, h6, strong {
     color: var(--mainText);
     font-family: var(--mainFont);
@@ -37,18 +54,33 @@ p, li, span, label, input, textarea {
     font-family: var(--secondaryFont);
 }
 
-.nav {
-    overflow: auto;
-}
-
 .navbar {
     background-color: var(--navColor);
     color: var(--navText);
     font-family: var(--mainFont);
     padding: 5px;
-    margin: 0;
+    /* margin-top: 50px;
+    height: 100px; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     position: sticky;
     top: 0;
+}
+
+/* want to animate the nav bar such that it has greater height, padding, and font size for the firt few seconds on the site, then it shrinks in all those areas (except padding?? maybe make the other elements not move from the animation??)
+does the animation need to go from big to default small or from default big to small? i.e. which version should my .navbar be configured for? */
+
+.welcome {
+    margin: auto;
+    grid-column: 2 / span 3;
+    text-align: center;
+}
+
+.navLink {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 900;
+    color: var(--linkText);
+    margin: auto;
 }
 
 
@@ -63,9 +95,30 @@ p, li, span, label, input, textarea {
     border-radius: 50px;
 }
 
-.welcome {
-    margin: auto;
+.aboutAndPic {
+    outline: solid;
+    outline-width: 5px;
+    outline-color: blue;
 }
+
+.about {
+    width: 100px;
+    outline: solid;
+    outline-width: 5px;
+    outline-color: red;
+}
+
+.profilePic {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    outline: solid;
+    outline-width: 5px;
+    outline-color: green;
+
+}
+
+/* trying to make about and pic inline with one another because fml i cant seem to do it. dunno why display: inline doesnt seem to work */
 
 .main-container {
     width: 1200px;
