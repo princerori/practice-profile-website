@@ -75,6 +75,7 @@ does the animation need to go from big to default small or from default big to s
     grid-column: 2 / span 3;
     text-align: center;
 }
+/* consider max height and max width and min?? look into it! */
 
 .navLink {
     font-family: 'Architects Daughter', cursive;
